@@ -267,6 +267,54 @@ Based on the notebook's test results:
 
 The best model depends on the business objective. If identifying more genuinely approved applications is especially important, recall may be more relevant; if overall ranking/discrimination is important, ROC-AUC is useful.
 
+
+## Project Visualizations
+
+The notebook contains several visualizations used during EDA and model evaluation.
+
+### Loan Approval Distribution
+
+This chart shows the distribution of approved vs. rejected loan applications.
+
+![Loan Approval Distribution](readme_images/loan_approval_distribution.png)
+
+### Categorical Feature Analysis
+
+The following visualization summarizes the main categorical variables in the dataset.
+
+![Categorical EDA](readme_images/categorical_eda.png)
+
+### Income Distribution
+
+Applicant and coapplicant income distributions are explored to understand the structure and spread of the income features.
+
+![Income Distribution](readme_images/income_distribution.png)
+
+### Outlier Analysis
+
+Box plots are used to inspect potential outliers across important numerical variables and compare them by loan approval status.
+
+![Outlier Analysis](readme_images/outlier_analysis.png)
+
+### Credit Score and Applicant Income by Loan Approval
+
+These distributions compare credit score and applicant income across the loan approval classes.
+
+![Credit Score and Income by Approval](readme_images/credit_income_by_approval.png)
+
+### Correlation Heatmap
+
+The correlation heatmap shows relationships among the numerical features and the loan approval target.
+
+![Correlation Heatmap](readme_images/correlation_heatmap.png)
+
+### Model Confusion Matrices
+
+Confusion matrices are used to visualize correct and incorrect predictions for the trained classification models.
+
+![Model Confusion Matrices](readme_images/model_confusion_matrices.png)
+
+
 ## Project Workflow
 
 ```text
@@ -380,7 +428,7 @@ jupyter notebook
 Open:
 
 ```text
-Intelligent_Loan_Approval_System(3).ipynb
+Intelligent_Loan_Approval_System.ipynb
 ```
 
 ### 5. Add the dataset
@@ -402,7 +450,7 @@ Run the cells from top to bottom to reproduce the preprocessing, EDA, model trai
 ```text
 Intelligent-Loan-Approval-System/
 │
-├── Intelligent_Loan_Approval_System(3).ipynb
+├── Intelligent_Loan_Approval_System.ipynb
 ├── loan_approval_data.csv
 └── README.md
 ```
@@ -437,4 +485,4 @@ Possible extensions include:
 
 ---
 
-*This README is based on the workflow, code, and results contained in the provided Jupyter Notebook.*
+
