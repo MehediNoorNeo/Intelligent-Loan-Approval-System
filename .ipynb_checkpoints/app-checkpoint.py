@@ -675,35 +675,15 @@ with result_col:
         )
 
     # Model information
+    # Keep HTML flush-left: indented lines are interpreted as a Markdown code block.
     st.markdown(
-        """
-        <div class="card">
-            <div class="section-title">🤖 About the Model</div>
-            <div class="section-subtitle">
-                This application uses the fitted model and preprocessing objects
-                produced by your Jupyter notebook.
-            </div>
-
-            <div class="info-row">
-                <span class="info-label">Model</span>
-                <span class="info-value">Gaussian Naive Bayes</span>
-            </div>
-
-            <div class="info-row">
-                <span class="info-label">Accuracy</span>
-                <span class="info-value">88.9%</span>
-            </div>
-
-            <div class="info-row">
-                <span class="info-label">ROC-AUC</span>
-                <span class="info-value">95.2%</span>
-            </div>
-
-            <div class="note">
-                These metrics come from the model evaluation in your notebook.
-                The deployed model should use the same preprocessing steps as training.
-            </div>
-        </div>
-        """,
+        """<div class="card">
+<div class="section-title">🤖 About the Model</div>
+<div class="section-subtitle">This application uses the fitted model and preprocessing objects produced by your Jupyter notebook.</div>
+<div class="info-row"><span class="info-label">Model</span><span class="info-value">Gaussian Naive Bayes</span></div>
+<div class="info-row"><span class="info-label">Accuracy</span><span class="info-value">88.9%</span></div>
+<div class="info-row"><span class="info-label">ROC-AUC</span><span class="info-value">95.2%</span></div>
+<div class="note">These metrics come from the model evaluation in your notebook. The deployed model should use the same preprocessing steps as training.</div>
+</div>""",
         unsafe_allow_html=True,
     )
