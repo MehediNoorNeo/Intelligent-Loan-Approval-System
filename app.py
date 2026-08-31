@@ -7,8 +7,8 @@ import streamlit as st
 # Page configuration
 # ------------------------------------------------------------
 st.set_page_config(
-    page_title="Intelligent Loan Approval System",
-    page_icon="🏦",
+    page_title="Loan Decision Studio",
+    page_icon="◆",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -204,6 +204,80 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# Professional dashboard theme — navy communicates trust, teal signals action,
+# and amber provides a restrained highlight colour for key information.
+st.markdown(
+    """
+    <style>
+    :root { --navy:#102A43; --deep:#071A2B; --teal:#0F8B8D; --teal-dark:#0B6B6D; --gold:#F4B942; --ink:#1F3448; --muted:#61758A; --line:#DCE5EE; }
+    .stApp {
+        background: radial-gradient(circle at 93% 0%, rgba(15,139,141,.10), transparent 22rem), radial-gradient(circle at 1% 26%, rgba(244,185,66,.10), transparent 18rem), #F4F7FB;
+        color:var(--ink);
+    }
+    [data-testid="stHeader"] { background:transparent; }
+    #MainMenu, footer { visibility:hidden; }
+    .block-container { max-width:1440px; padding-top:1.15rem; padding-bottom:2.75rem; }
+    .hero { background:linear-gradient(118deg, #071A2B 0%, #102A43 58%, #0B6B6D 145%); padding:30px 36px; border-radius:22px; margin:0 0 1rem; box-shadow:0 18px 45px rgba(7,26,43,.20); position:relative; overflow:hidden; }
+    .hero::after { content:""; position:absolute; width:230px; height:230px; border:1px solid rgba(255,255,255,.14); border-radius:50%; right:-58px; top:-110px; box-shadow:-38px 42px 0 -1px rgba(255,255,255,.08); }
+    .hero-eyebrow { color:#8BE3DD; letter-spacing:.13em; text-transform:uppercase; font-size:.69rem; font-weight:800; margin-bottom:8px; }
+    .hero-title { font-size:2.28rem; letter-spacing:-.035em; line-height:1.12; }
+    .hero-subtitle { max-width:660px; color:#D5E4ED; font-size:.96rem; }
+    .hero-stat { color:#D5E4ED; font-size:.8rem; margin-top:16px; } .hero-stat b { color:#F6CD72; }
+    .card { background:rgba(255,255,255,.94); border:1px solid var(--line); border-radius:16px; padding:22px 24px; box-shadow:0 8px 25px rgba(28,58,84,.055); margin-bottom:16px; }
+    .section-title { color:var(--navy); font-size:1.02rem; font-weight:780; letter-spacing:-.012em; }
+    .section-subtitle, .info-label, .prob-caption { color:var(--muted); }
+    .result-approved { background:linear-gradient(135deg,#E9FAF6,#F7FFFC); border-color:#AEE4D3; border-radius:16px; box-shadow:0 8px 24px rgba(10,128,101,.08); }
+    .result-rejected { background:linear-gradient(135deg,#FFF2F2,#FFF9F8); border-color:#F4C5C5; border-radius:16px; box-shadow:0 8px 24px rgba(177,54,54,.07); }
+    .result-title-approved { color:#087A62; } .result-title-rejected { color:#B33B45; } .result-text { color:#536779; }
+    .prob-ring { background:conic-gradient(var(--teal) var(--p), #E7EDF2 0); box-shadow:inset 0 0 0 7px rgba(255,255,255,.76); } .prob-value, .info-value { color:var(--navy); }
+    .info-row { border-bottom-color:#EDF1F5; } .note { background:#F0F7F8; border-color:#C7E2E2; color:#176F72; } .footer-note { color:#718399; }
+    div.stButton > button { border-radius:10px; min-height:44px; font-weight:750; transition:transform .18s ease, box-shadow .18s ease; }
+    div.stButton > button[kind="primary"] { background:linear-gradient(100deg,#0F8B8D,#0B6B6D); border:none; box-shadow:0 8px 16px rgba(15,139,141,.22); }
+    div.stButton > button[kind="primary"]:hover { background:linear-gradient(100deg,#0B7779,#075A5C); transform:translateY(-1px); box-shadow:0 11px 20px rgba(15,139,141,.25); }
+    div.stButton > button[kind="secondary"] { color:var(--navy); border:1px solid #BED0DD; background:rgba(255,255,255,.72); }
+    div[data-baseweb="input"] > div, div[data-baseweb="select"] > div { border-color:#C8D5E0 !important; border-radius:9px !important; background:#FFF !important; }
+    div[data-baseweb="input"] > div:focus-within, div[data-baseweb="select"] > div:focus-within { border-color:var(--teal) !important; box-shadow:0 0 0 3px rgba(15,139,141,.12) !important; }
+    [data-testid="stWidgetLabel"] p { color:#385166 !important; font-size:.86rem !important; font-weight:650 !important; }
+    [data-testid="stSlider"] [role="slider"] { background-color:var(--teal); } hr { border-color:#E3EAF0; margin:1.35rem 0 !important; }
+    .form-kicker { display:inline-flex; color:var(--teal-dark); background:#E7F5F4; border:1px solid #C7E6E3; border-radius:999px; padding:5px 10px; font-size:.72rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase; margin-bottom:10px; }
+    .empty-visual { width:48px; height:48px; display:grid; place-items:center; background:#E7F5F4; color:var(--teal-dark); border-radius:13px; font-size:1.35rem; margin-bottom:14px; }
+    @media (max-width:900px) { .hero { padding:25px; } .hero-title { font-size:1.65rem; } }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Accent layer: colour is used as navigation and emphasis, not decoration alone.
+st.markdown(
+    """
+    <style>
+    :root { --sky:#3DA9FC; --violet:#7C5CFC; --mint:#47D7AC; --coral:#FF7A7A; --sun:#F8C85E; }
+    .hero { background:linear-gradient(118deg,#071A2B 0%,#102A43 48%,#165C70 100%); }
+    .hero::before { content:""; position:absolute; width:310px; height:310px; border-radius:50%; right:80px; bottom:-235px; background:radial-gradient(circle,rgba(71,215,172,.30),transparent 67%); }
+    .palette-strip { display:flex; gap:7px; position:absolute; right:34px; bottom:28px; z-index:2; }
+    .palette-strip span { width:11px; height:11px; border-radius:50%; box-shadow:0 0 0 4px rgba(255,255,255,.10); }
+    .palette-strip .p-teal { background:var(--mint); } .palette-strip .p-sky { background:var(--sky); } .palette-strip .p-violet { background:var(--violet); } .palette-strip .p-gold { background:var(--sun); }
+    .form-kicker { color:#5C43CA; background:#F0EDFF; border-color:#D9D1FF; }
+    .stApp { background:radial-gradient(circle at 8% 8%,rgba(124,92,252,.12),transparent 20rem), radial-gradient(circle at 95% 28%,rgba(61,169,252,.14),transparent 25rem), radial-gradient(circle at 51% 97%,rgba(71,215,172,.13),transparent 27rem), #EEF3F8; }
+    .card { border:1px solid #D7E2EC; border-top-width:1px; box-shadow:0 13px 30px rgba(31,65,94,.08); }
+    .form-card { border-color:#D8CFFF; background:linear-gradient(135deg,#F6F3FF 0%,#EEE9FF 100%); }
+    .empty-card { border-color:#BFDFFF; background:linear-gradient(135deg,#EEF8FF 0%,#DFF2FF 100%); }
+    .probability-card { border-color:#B9E7DF; background:linear-gradient(135deg,#ECFBF7 0%,#DDF7EF 100%); }
+    .summary-card { border-color:#F1D99B; background:linear-gradient(135deg,#FFF9E9 0%,#FFF0C9 100%); }
+    .model-card { border-color:#C5D9FA; background:linear-gradient(135deg,#F0F5FF 0%,#E4EEFF 100%); }
+    .empty-visual { background:linear-gradient(135deg,#E4F4FF,#E8FBF4); color:#147A85; box-shadow:0 8px 18px rgba(61,169,252,.16); }
+    .note { background:linear-gradient(100deg,#F0FAFA,#F5F9FF); }
+    .result-approved { border-left:5px solid var(--mint); } .result-rejected { border-left:5px solid var(--coral); }
+    .prob-ring::before { background:linear-gradient(135deg,#FFFFFF,#F6FCFC); }
+    .info-row { position:relative; } .info-row:hover { background:#F6FAFC; margin-inline:-8px; padding-inline:8px; border-radius:7px; }
+    div[data-baseweb="input"] > div, div[data-baseweb="select"] > div { box-shadow:0 2px 6px rgba(16,42,67,.025); }
+    div.stButton > button[kind="secondary"]:hover { color:var(--violet); border-color:#B9ABFF; background:#F5F3FF; }
+    @media (max-width:900px) { .palette-strip { display:none; } }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # ------------------------------------------------------------
 # Load fitted model + fitted preprocessing objects
 # ------------------------------------------------------------
@@ -252,10 +326,13 @@ def reset_form():
 st.markdown(
     """
     <div class="hero">
-        <div class="hero-title">🏦 Intelligent Loan Approval System</div>
+        <div class="hero-eyebrow">Loan decision intelligence</div>
+        <div class="hero-title">Loan Decision Studio</div>
         <div class="hero-subtitle">
-            AI-powered loan approval prediction using your trained machine-learning model
+            A clear, data-led view of each loan application—powered by your trained machine-learning model.
         </div>
+        <div class="hero-stat"><b>●</b> Secure prediction workspace &nbsp;·&nbsp; Model confidence included</div>
+        <div class="palette-strip" aria-label="Brand colour palette"><span class="p-teal"></span><span class="p-sky"></span><span class="p-violet"></span><span class="p-gold"></span></div>
     </div>
     """,
     unsafe_allow_html=True,
@@ -277,10 +354,11 @@ with form_col:
 
     st.markdown(
         """
-        <div class="card">
+        <div class="card form-card">
+            <div class="form-kicker">Application workspace</div>
             <div class="section-title">👤 Applicant Information</div>
             <div class="section-subtitle">
-                Enter the applicant's financial and personal information.
+                Complete the profile below to generate an informed lending recommendation.
             </div>
         """,
         unsafe_allow_html=True,
@@ -565,14 +643,14 @@ with result_col:
     if prediction is None:
         st.markdown(
             """
-            <div class="card">
-                <div class="section-title">🛡️ Prediction Result</div>
+            <div class="card empty-card">
+                <div class="empty-visual">✦</div>
+                <div class="section-title">Ready for a decision</div>
                 <div class="section-subtitle">
-                    Your prediction will appear here after you submit the form.
+                    Your approval outcome and model confidence will appear here.
                 </div>
                 <div class="note">
-                    Complete the applicant information and click
-                    <b>Predict Loan Approval</b>.
+                    Review the applicant profile, then select <b>Predict Loan Approval</b> to begin the assessment.
                 </div>
             </div>
             """,
@@ -620,64 +698,35 @@ with result_col:
                 caption = "Low Probability"
 
             st.markdown(
-                f"""
-                <div class="card">
-                    <div class="section-title">📊 Approval Probability</div>
-                    <div class="prob-wrap">
-                        <div class="prob-ring" style="--p: {pct_for_css}%">
-                            <div class="prob-value">{pct:.0f}%</div>
-                        </div>
-                        <div class="prob-caption">{caption}</div>
-                    </div>
-                </div>
-                """,
+                f"""<div class="card probability-card">
+<div class="section-title">📊 Approval Probability</div>
+<div class="prob-wrap">
+<div class="prob-ring" style="--p: {pct_for_css}%"><div class="prob-value">{pct:.0f}%</div></div>
+<div class="prob-caption">{caption}</div>
+</div>
+</div>""",
                 unsafe_allow_html=True,
             )
 
         # Input summary
+        # Keep HTML flush-left: Markdown treats four leading spaces as a code block.
         st.markdown(
-            f"""
-            <div class="card">
-                <div class="section-title">📌 Application Summary</div>
-
-                <div class="info-row">
-                    <span class="info-label">Credit Score</span>
-                    <span class="info-value">{credit_score}</span>
-                </div>
-
-                <div class="info-row">
-                    <span class="info-label">Applicant Income</span>
-                    <span class="info-value">{applicant_income:,.0f}</span>
-                </div>
-
-                <div class="info-row">
-                    <span class="info-label">Loan Amount</span>
-                    <span class="info-value">{loan_amount:,.0f}</span>
-                </div>
-
-                <div class="info-row">
-                    <span class="info-label">DTI Ratio</span>
-                    <span class="info-value">{dti_ratio:.2f}</span>
-                </div>
-
-                <div class="info-row">
-                    <span class="info-label">Employment</span>
-                    <span class="info-value">{employment_status}</span>
-                </div>
-
-                <div class="info-row">
-                    <span class="info-label">Education</span>
-                    <span class="info-value">{education_level}</span>
-                </div>
-            </div>
-            """,
+            f"""<div class="card summary-card">
+<div class="section-title">📌 Application Summary</div>
+<div class="info-row"><span class="info-label">Credit Score</span><span class="info-value">{credit_score}</span></div>
+<div class="info-row"><span class="info-label">Applicant Income</span><span class="info-value">{applicant_income:,.0f}</span></div>
+<div class="info-row"><span class="info-label">Loan Amount</span><span class="info-value">{loan_amount:,.0f}</span></div>
+<div class="info-row"><span class="info-label">DTI Ratio</span><span class="info-value">{dti_ratio:.2f}</span></div>
+<div class="info-row"><span class="info-label">Employment</span><span class="info-value">{employment_status}</span></div>
+<div class="info-row"><span class="info-label">Education</span><span class="info-value">{education_level}</span></div>
+</div>""",
             unsafe_allow_html=True,
         )
 
     # Model information
     # Keep HTML flush-left: indented lines are interpreted as a Markdown code block.
     st.markdown(
-        """<div class="card">
+        """<div class="card model-card">
 <div class="section-title">🤖 About the Model</div>
 <div class="section-subtitle">This application uses the fitted model and preprocessing objects produced by your Jupyter notebook.</div>
 <div class="info-row"><span class="info-label">Model</span><span class="info-value">Gaussian Naive Bayes</span></div>
