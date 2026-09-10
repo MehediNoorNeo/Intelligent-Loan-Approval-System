@@ -1,5 +1,7 @@
-streamlit
-joblib
-scikit-learn
-pandas
-numpy
+# Keep deployment compatible with the fitted scikit-learn artifacts.
+# The saved model and preprocessors were created with scikit-learn 1.7.2.
+streamlit==1.49.1
+joblib==1.5.2
+scikit-learn==1.7.2
+pandas==2.3.2
+numpy==2.3.3
