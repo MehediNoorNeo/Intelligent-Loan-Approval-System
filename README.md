@@ -1,6 +1,12 @@
 # 🏦 Intelligent Loan Approval System
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://yw7hamkiehgq3mxuat73qv.streamlit.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue.svg)](https://github.com/MehediNoorNeo/Intelligent-Loan-Approval-System)
+
 An end-to-end **Machine Learning + Streamlit** project for predicting whether a loan application will be approved based on an applicant's financial, demographic, employment, and loan-related information.
+
+> 🚀 **Live Demo:** Access and test the interactive web application live at: **[yw7hamkiehgq3mxuat73qv.streamlit.app](https://yw7hamkiehgq3mxuat73qv.streamlit.app/)**
 
 The project covers the complete workflow from **data preprocessing and exploratory data analysis to model comparison and an interactive loan approval prediction dashboard**.
 
@@ -35,6 +41,8 @@ This project uses supervised machine learning to learn patterns from historical 
 # 🖥️ Interactive Streamlit Dashboard
 
 The project includes an interactive web dashboard where users can enter applicant information and receive a loan approval prediction.
+
+🌐 **Live Application URL:** [https://yw7hamkiehgq3mxuat73qv.streamlit.app/](https://yw7hamkiehgq3mxuat73qv.streamlit.app/)
 
 ### Dashboard features
 
@@ -606,6 +614,12 @@ Then run the notebook cells from top to bottom to reproduce the preprocessing, E
 
 ## 4. Run the Streamlit Dashboard
 
+You can access the live deployed dashboard immediately in your browser:
+
+🔗 **Live App:** [https://yw7hamkiehgq3mxuat73qv.streamlit.app/](https://yw7hamkiehgq3mxuat73qv.streamlit.app/)
+
+To run the dashboard locally instead:
+
 ```bash
 streamlit run app.py
 ```
@@ -679,7 +693,7 @@ Possible extensions include:
 - Add automated tests for preprocessing and prediction
 - Add an API for model serving
 - Add authentication and secure applicant-data handling
-- Deploy the Streamlit application to a cloud platform
+- [x] Deploy the Streamlit application to a cloud platform ([Live App](https://yw7hamkiehgq3mxuat73qv.streamlit.app/))
 
 ---
 
@@ -700,6 +714,12 @@ Possible extensions include:
 # 👨‍💻 Author
 
 **Mehedi Hasan**
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
