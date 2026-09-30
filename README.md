@@ -58,7 +58,7 @@ The project includes an interactive web dashboard where users can enter applican
 ### Dashboard Preview
 
 <p align="center">
-  <img src="readme_images/dashboard.png" alt="Intelligent Loan Approval System Dashboard" width="900">
+  <img src="readme_images/dashboard.png?v=2" alt="Intelligent Loan Approval System Dashboard" width="900">
 </p>
 
 ---
