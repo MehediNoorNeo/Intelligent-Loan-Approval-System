@@ -215,7 +215,7 @@ st.markdown(
         color:var(--ink);
     }
     [data-testid="stHeader"] { background:transparent; }
-    #MainMenu, footer { visibility:hidden; }
+    footer { visibility:hidden; }
     .block-container { max-width:1440px; padding-top:1.15rem; padding-bottom:2.75rem; }
     .hero { background:linear-gradient(118deg, #071A2B 0%, #102A43 58%, #0B6B6D 145%); padding:30px 36px; border-radius:22px; margin:0 0 1rem; box-shadow:0 18px 45px rgba(7,26,43,.20); position:relative; overflow:hidden; }
     .hero::after { content:""; position:absolute; width:230px; height:230px; border:1px solid rgba(255,255,255,.14); border-radius:50%; right:-58px; top:-110px; box-shadow:-38px 42px 0 -1px rgba(255,255,255,.08); }
