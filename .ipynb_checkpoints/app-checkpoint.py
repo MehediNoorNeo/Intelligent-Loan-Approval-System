@@ -8,7 +8,7 @@ import streamlit as st
 # ------------------------------------------------------------
 st.set_page_config(
     page_title="Loan Decision Studio",
-    page_icon="◆",
+    page_icon="🏦",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -258,12 +258,13 @@ st.markdown(
     .palette-strip span { width:11px; height:11px; border-radius:50%; box-shadow:0 0 0 4px rgba(255,255,255,.10); }
     .palette-strip .p-teal { background:var(--mint); } .palette-strip .p-sky { background:var(--sky); } .palette-strip .p-violet { background:var(--violet); } .palette-strip .p-gold { background:var(--sun); }
     .form-kicker { color:#5C43CA; background:#F0EDFF; border-color:#D9D1FF; }
-    .card { border-top:4px solid #D9E6EE; }
-    .form-card { border-top-color:var(--violet); background:linear-gradient(135deg,#FFFFFF 0%,#FCFBFF 100%); }
-    .empty-card { border-top-color:var(--sky); background:linear-gradient(135deg,#FFFFFF 0%,#F7FBFF 100%); }
-    .probability-card { border-top-color:var(--teal); background:linear-gradient(135deg,#FFFFFF 0%,#F5FEFC 100%); }
-    .summary-card { border-top-color:var(--sun); background:linear-gradient(135deg,#FFFFFF 0%,#FFFCF5 100%); }
-    .model-card { border-top-color:var(--sky); background:linear-gradient(135deg,#FFFFFF 0%,#F7FAFF 100%); }
+    .stApp { background:radial-gradient(circle at 8% 8%,rgba(124,92,252,.12),transparent 20rem), radial-gradient(circle at 95% 28%,rgba(61,169,252,.14),transparent 25rem), radial-gradient(circle at 51% 97%,rgba(71,215,172,.13),transparent 27rem), #EEF3F8; }
+    .card { border:1px solid #D7E2EC; border-top-width:1px; box-shadow:0 13px 30px rgba(31,65,94,.08); }
+    .form-card { border-color:#D8CFFF; background:linear-gradient(135deg,#F6F3FF 0%,#EEE9FF 100%); }
+    .empty-card { border-color:#BFDFFF; background:linear-gradient(135deg,#EEF8FF 0%,#DFF2FF 100%); }
+    .probability-card { border-color:#B9E7DF; background:linear-gradient(135deg,#ECFBF7 0%,#DDF7EF 100%); }
+    .summary-card { border-color:#F1D99B; background:linear-gradient(135deg,#FFF9E9 0%,#FFF0C9 100%); }
+    .model-card { border-color:#C5D9FA; background:linear-gradient(135deg,#F0F5FF 0%,#E4EEFF 100%); }
     .empty-visual { background:linear-gradient(135deg,#E4F4FF,#E8FBF4); color:#147A85; box-shadow:0 8px 18px rgba(61,169,252,.16); }
     .note { background:linear-gradient(100deg,#F0FAFA,#F5F9FF); }
     .result-approved { border-left:5px solid var(--mint); } .result-rejected { border-left:5px solid var(--coral); }
@@ -697,57 +698,28 @@ with result_col:
                 caption = "Low Probability"
 
             st.markdown(
-                f"""
-                <div class="card probability-card">
-                    <div class="section-title">📊 Approval Probability</div>
-                    <div class="prob-wrap">
-                        <div class="prob-ring" style="--p: {pct_for_css}%">
-                            <div class="prob-value">{pct:.0f}%</div>
-                        </div>
-                        <div class="prob-caption">{caption}</div>
-                    </div>
-                </div>
-                """,
+                f"""<div class="card probability-card">
+<div class="section-title">📊 Approval Probability</div>
+<div class="prob-wrap">
+<div class="prob-ring" style="--p: {pct_for_css}%"><div class="prob-value">{pct:.0f}%</div></div>
+<div class="prob-caption">{caption}</div>
+</div>
+</div>""",
                 unsafe_allow_html=True,
             )
 
         # Input summary
+        # Keep HTML flush-left: Markdown treats four leading spaces as a code block.
         st.markdown(
-            f"""
-            <div class="card summary-card">
-                <div class="section-title">📌 Application Summary</div>
-
-                <div class="info-row">
-                    <span class="info-label">Credit Score</span>
-                    <span class="info-value">{credit_score}</span>
-                </div>
-
-                <div class="info-row">
-                    <span class="info-label">Applicant Income</span>
-                    <span class="info-value">{applicant_income:,.0f}</span>
-                </div>
-
-                <div class="info-row">
-                    <span class="info-label">Loan Amount</span>
-                    <span class="info-value">{loan_amount:,.0f}</span>
-                </div>
-
-                <div class="info-row">
-                    <span class="info-label">DTI Ratio</span>
-                    <span class="info-value">{dti_ratio:.2f}</span>
-                </div>
-
-                <div class="info-row">
-                    <span class="info-label">Employment</span>
-                    <span class="info-value">{employment_status}</span>
-                </div>
-
-                <div class="info-row">
-                    <span class="info-label">Education</span>
-                    <span class="info-value">{education_level}</span>
-                </div>
-            </div>
-            """,
+            f"""<div class="card summary-card">
+<div class="section-title">📌 Application Summary</div>
+<div class="info-row"><span class="info-label">Credit Score</span><span class="info-value">{credit_score}</span></div>
+<div class="info-row"><span class="info-label">Applicant Income</span><span class="info-value">{applicant_income:,.0f}</span></div>
+<div class="info-row"><span class="info-label">Loan Amount</span><span class="info-value">{loan_amount:,.0f}</span></div>
+<div class="info-row"><span class="info-label">DTI Ratio</span><span class="info-value">{dti_ratio:.2f}</span></div>
+<div class="info-row"><span class="info-label">Employment</span><span class="info-value">{employment_status}</span></div>
+<div class="info-row"><span class="info-label">Education</span><span class="info-value">{education_level}</span></div>
+</div>""",
             unsafe_allow_html=True,
         )
 
